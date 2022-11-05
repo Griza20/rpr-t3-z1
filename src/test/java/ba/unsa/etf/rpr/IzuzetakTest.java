@@ -1,6 +1,6 @@
 package ba.unsa.etf.rpr;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
@@ -9,12 +9,8 @@ import org.junit.jupiter.api.Test;
  */
 public class IzuzetakTest
 {
-    /**
-     * Rigorous Test :-)
-     */
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    public void bacanjeIzuzetka() {
+        assertThrows(Izuzetak.class, () -> { MobilniBroj mb = new MobilniBroj(69,"9530159"); }, "Nedozvoljena mobilna mreza");
     }
 }
